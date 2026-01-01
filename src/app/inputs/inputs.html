@@ -1,0 +1,12 @@
+<h1 class="bg-slate-700 text-white text-center">get and input</h1>
+<div class="bg-slate-600 text-white">
+
+  Enter your name:
+  <input type="text" id="name" (input)="getName($event)" placeholder="type your name" class="bg-white cursor-pointer text-black rounded-md p-2 m-2"/>
+</div>
+ <button (click)="showName()" class="bg-blue-600 text-white p-2 m-2 rounded-md">show name</button>
+ <br>
+ <button (click)="setName()" class="bg-green-600 text-white p-2 m-2 rounded-md">set name</button>
+
+ <br>
+  <p class="bg-violet-800 text-white text-center">Your name is: {{name}}</p>

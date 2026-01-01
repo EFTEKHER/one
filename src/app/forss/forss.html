@@ -1,0 +1,22 @@
+
+<h1>for loop in angular</h1>
+<!-- track expression -->
+@for(user of users; track user)
+{
+  <div class="bg-slate-500 text-white p-4 m-2 rounded-md w-full">
+    <p class="bg-blue-600 text-white p-4 rounded-md m-2 w-full">User name is: {{user}}</p>
+  </div>
+}
+
+@for(student of students; track student.name; let id =$index)
+
+{
+  <div class="bg-slate-700 text-white p-4 m-2 rounded-md w-full">
+    <p class="bg-amber-600 p-4 rounded-2xl m-2 w-full">id is {{id}}</p>
+    <p class="bg-amber-600 text-white p-4 rounded-md m-2 w-full">Student name is: {{student.name}}</p>
+    <p class="bg-emerald-600 text-white p-4 rounded-md m-2 w-full">Student age is: {{student.age}}</p>
+    <button (click)="student.age=student.age+1" class="bg-green-800 text-white p-2 m-2 rounded-md">Increase Age</button>
+
+  </div>
+}
+

@@ -1,0 +1,51 @@
+<div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 to-slate-700 text-white">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-extrabold mb-10 tracking-wider">
+    🚀 Futuristic Counter
+  </h1>
+
+  <!-- Counter Display -->
+  <div
+    class="mb-10 w-48 h-48 rounded-full bg-black/40 backdrop-blur-md
+           flex items-center justify-center
+           text-6xl font-bold shadow-[0_0_40px_rgba(59,130,246,0.6)]
+           transition-all duration-300">
+    {{ count }}
+  </div>
+
+  <!-- Buttons -->
+  <div class="flex gap-6">
+
+    <!-- Increment -->
+    <button
+      (click)="increment()"
+      class="w-32 h-32 rounded-full bg-green-500 hover:bg-green-600
+             flex items-center justify-center text-xl font-semibold
+             shadow-lg hover:shadow-green-500/50
+             transition-all duration-300 active:scale-95">
+      +
+    </button>
+
+    <!-- Reset -->
+    <button
+      (click)="reset()"
+      class="w-32 h-32 rounded-full bg-blue-500 hover:bg-blue-600
+             flex items-center justify-center text-xl font-semibold
+             shadow-lg hover:shadow-blue-500/50
+             transition-all duration-300 active:scale-95">
+      Reset
+    </button>
+
+    <!-- Decrement -->
+    <button
+      (click)="decrement()"
+      class="w-32 h-32 rounded-full bg-red-500 hover:bg-red-600
+             flex items-center justify-center text-xl font-semibold
+             shadow-lg hover:shadow-red-500/50
+             transition-all duration-300 active:scale-95">
+      −
+    </button>
+
+  </div>
+</div>

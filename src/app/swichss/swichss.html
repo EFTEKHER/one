@@ -1,0 +1,33 @@
+<h1>switch case angular 21</h1>
+<button (click)="handlechange()" class="bg-amber-400 text-white p-4 m-4 rounded-4xl">click</button>
+@switch(color)
+{
+  @case(0)
+  {
+    <p class="bg-green-600 text-white p-4 rounded-md w-full">Color is green</p>
+  }
+  @case(2)
+  {
+    <p class="bg-red-600 text-white p-4 rounded-md w-full">Color is red</p>
+  }
+  @case(3)
+  {
+    <p class="bg-blue-600 text-white p-4 rounded-md w-full">Color is blue</p>
+  }
+  @case(4)
+  {
+    <p class="bg-yellow-600 text-white p-4 rounded-md w-full">Color is yellow</p>
+  }
+  @case(5)
+  {
+    <p class="bg-purple-600 text-white p-4 rounded-md w-full">
+      Color is purple
+    </p>
+
+}
+ @default
+  {
+    <p class="bg-gray-600 text-white p-4 rounded-md w-full">Color is gray</p>
+  }
+}
+

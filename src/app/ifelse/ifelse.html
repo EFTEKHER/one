@@ -1,0 +1,47 @@
+<!-- <h1>If Else | control flow</h1>
+
+<button (click)="clickevent($event)" class="">
+Click me
+</button>
+@if(display == true)
+{
+  <div class="container bg-amber-900 text-white w-full h-[250px] p-4 rounded-md">
+    This is true block
+
+
+  </div>
+}
+
+@else
+{
+  <div class="container bg-red-900 text-white w-full p-4 rounded-md">
+    This is false block
+  </div>
+} -->
+
+  <h1>if else</h1>
+  @if(color==0)
+  {
+    <p class="bg-green-600 text-white p-4 rounded-md w-full">Color is green</p>
+  }
+  @else if(color==2)
+  {
+    <p class="bg-red-600 text-white p-4 rounded-md w-full">Color is red</p>
+  }
+  @else if(color==3)
+  {
+    <p class="bg-blue-600 text-white p-4 rounded-md w-full">Color is blue</p>
+  }
+  @else if(color==4)
+  {
+    <p class="bg-yellow-600 text-white p-4 rounded-md w-full">Color is yellow</p>
+  }
+  @else if(color==5)
+  {
+    <p class="bg-purple-600 text-white p-4 rounded-md w-full">Color is purple</p>
+  }
+  @else
+  {
+    <p class="bg-gray-600 text-white p-4 rounded-md w-full">Color is gray</p>
+  }
+<button (click)="handlechange()" class="bg-amber-300 rounded-3xl p-2 m-2">Change Color</button>

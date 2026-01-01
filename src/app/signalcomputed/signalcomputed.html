@@ -1,0 +1,13 @@
+
+<h1>signal computed</h1>
+<h2 class="bg-slate-800 text-white p-2 m-2 rounded-lg">Computed Signals in Angular</h2>
+<p class="bg-amber-800 text-white p-2 m-2 rounded-lg">
+  X value: {{x()}} <br>
+  Y value: {{y()}} <br>
+  Z value (X + Y): {{z()}} <br>
+
+  <button (click)="updatevalues()" class="bg-violet-800 text-white p-4 m-4 rounded-3xl transition-all">Update X and Y Values</button>
+  <button (click)="updatex()" class="bg-amber-200 text-white p-4 m-4 rounded-2xl">
+    Update X Only
+  </button>
+</p>

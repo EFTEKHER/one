@@ -1,0 +1,8 @@
+<p>signalss works!</p>
+<h2>signals are two types 1. writable signals 2. computed signals</h2>
+<p>writable signals are used to store a value that can be changed later.</p>
+<h2 class="bg-slate-500 p-2 m-2 rounded-2xl text-white">{{x}}</h2>
+<h2 class="bg-amber-300 p-2 m-2 rounded-2xl">{{count()}}</h2>
+<button (click)="count.set(count()+1)" class="bg-green-600 text-white p-2 m-2 rounded-md">Increase Count</button>
+<button (click)="count.set(count()-1)" class="bg-red-600 text-white p-2 m-2 rounded-md">Decrease Count</button>
+<button (click)="updatecount()" class="bg-blue-600 text-white p-2 m-2 rounded-md">Update X by 10</button>
