@@ -1,0 +1,17 @@
+<h2 class="bg-slate-800 text-white text-center">To Do List</h2>
+<input type="text" [(ngModel)]="task" placeholder="Enter new todo" class="border-2 border-slate-700 p-2 m-2 rounded-lg"/>
+<button (click)="addTask()" class="bg-blue-800 text-white p-2 m-2 rounded-lg">Add Task</button>
+
+<!-- task="";
+tasksList:{id:number,task:string}[]=[]; -->
+
+@for(task of tasksList; track task.id)
+{
+  <div class="bg-slate-200 p-2 m-2 rounded-lg flex justify-between items-center">
+    <span>{{task.id}}. {{task.task}}</span>
+    <button (click)="deleteTask(task.id)" class="bg-red-600 text-white p-1 m-1 rounded-lg">Delete</button>
+  </div>
+  
+
+}
+

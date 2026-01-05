@@ -1,0 +1,12 @@
+<h1 class="bg-slate-700 text-white text-center p-4">App Data</h1>
+<div class="bg-slate-800 text-white w-[50%] rounded-2xl flex flex-col m-auto p-20">
+  <h2 class="text-center">User Data from Parent Component</h2>
+  <p class="bg-slate-700 p-4 rounded-2xl mt-4">User Name: {{ selectedUser.value}}</p>
+
+  <select #selectedUser (change)="onUserChange(selectedUser.value)" class="bg-white text-black rounded-2xl p-4 mt-4">
+    <option value="Efte">Efte</option>
+    <option value="kher">Kher</option>
+    <option value="Ali">Ali</option>
+  </select>
+
+  

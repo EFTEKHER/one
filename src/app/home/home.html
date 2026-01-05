@@ -1,0 +1,16 @@
+<p>Home</p>
+<!-- <a [routerLink]="['profile', {name:'Eftekher Ali Efte'}]" class="bg-pink-800 p-2 m-2 text-white text-center rounded-b-2xl">Go to profile</a>
+
+<h1>or click button</h1>
+<button (click)="gotoprofile()" class="bg-slate-800 text-white p-2 m-2 rounded-2xl">Profile with Name</button> -->
+<!-- <a routerLink="profile" class="bg-slate-700 w-40 p-4 m-4 rounded-4xl text-white">Go to profile</a> -->
+ <ul>
+ <h1>user list</h1>
+ @for(user of users; track user.id){
+
+      <li class="bg-slate-800 text-white w-[50%] p-4 m-4 rounded-2xl">
+        <a routerLink="user/{{user.id}}">{{user.name}}</a>
+      </li>
+
+ }
+</ul>

@@ -1,0 +1,12 @@
+<h1>
+  ngIfss works!
+</h1>
+<!-- <a href="/">login</a>
+<br>
+<a href="/logout">logout</a> -->
+<div *ngIf="login; else elseBlock">
+<button (click)="islogout()" ><a href="/logout">logout</a></button>
+</div>
+<ng-template #elseBlock>
+<button (click)="isworked()"><a href="">login</a></button>
+</ng-template>

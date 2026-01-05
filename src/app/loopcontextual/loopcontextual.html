@@ -1,0 +1,50 @@
+<p>loopcontextual works!</p>
+@for(user of users;track user.name; let i=$index)
+{
+  <div class="bg-slate-700 text-white p-2 m-2 rounded-lg">
+    Index: {{i}} <br>
+    Name: {{user.name}} <br>
+    Age: {{user.age}} <br>
+    <br>
+    @if(user.age>=24)
+    {
+      @if($first || $last){
+        <span class="bg-orange-800 text-white p-2 m-2 rounded-lg">Eligible for Senior Position (First or Last in List)</span>
+    }
+      @else{
+        <span class="bg-blue-800 text-white p-2 m-2 rounded-lg">Eligible for Senior Position</span>
+    }
+  }
+    @else()
+    {
+      <span class="bg-violet-800 text-white p-2 m-2 rounded-lg">Not Eligible for Senior Position</span>
+    }
+  </div>
+
+}
+@for(item of users;track item.name;let i=$index)
+{
+  <div class="bg-slate-500 text-white p-2 m-2 rounded-lg">
+
+    <br>
+    @if($even)
+    {
+       Index: {{i}} <br>
+    Name: {{item.name}} <br>
+    Age: {{item.age}} <br>
+      <span class="bg-green-800 text-white p-2 m-2 rounded-lg">Even Index</span>
+    }
+    @else
+    {
+       Index: {{i}} <br>
+    Name: {{item.name}} <br>
+    Age: {{item.age}} <br>
+      <span class="bg-red-800 text-white p-2 m-2 rounded-lg">Odd Index</span>
+    }
+  </div>
+}
+
+@empty()
+{
+  <p>No users available.</p>
+}
