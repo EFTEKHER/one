@@ -56,4 +56,18 @@
 <div *ngIf="counter!=5">
  <app-app-components [counter]="counter" #appComponents></app-app-components>
 </div> -->
+<h1>service</h1>
+<button class="bg-slate-700 text-white p-4 m-2 rounded-2xl" (click)="getProductData()">Load product</button>
+
+@for(item of ProductData;track item){
+  <div class="bg-violet-800 text-center p-10 m-20  text-white rounded-4xl">
+   <h3>{{item.name}}</h3>
+   <h3>{{item.branch}}</h3>
+   <h3>${{item.price}}</h3>
+
+  </div>
+
+
+
+}
 

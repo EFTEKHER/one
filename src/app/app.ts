@@ -86,7 +86,17 @@ export class App {
 //     console.log(this.AppComponents.counter);
 //   })
 // }
+ProductData:{
+    name: string;
+    branch: string;
+    price: string;
+}[] | undefined;
 constructor(private products:Product){
-  
+  console.log("product service")
 }
+getProductData(){
+ this.ProductData= this.products.getProductData()
+ console.log(this.ProductData)
+}
+
 }
