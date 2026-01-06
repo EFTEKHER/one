@@ -1,8 +1,11 @@
-import { Component, Input, signal } from '@angular/core';
+import { Component, Input, signal, viewChild,afterNextRender } from '@angular/core';
 import { Appdata } from './appdata/appdata';
 import { Login } from './login/login';
 import { Signup } from './signup/signup';
+import { Product } from './services/product';
 // import { ProfileComponent } from './profile/profile';
+
+import { ViewChild } from '@angular/core';
 import { Counter } from './counter/counter';
 import { Inputs } from './inputs/inputs';
 import { Ifelse } from './ifelse/ifelse';
@@ -29,10 +32,13 @@ import { Profilesxx } from './profilesxx/profilesxx';
 import { Validatorm } from './validatorm/validatorm';
 import { Templatedriven } from './templatedriven/templatedriven';
 import { Reusecc } from './reusecc/reusecc';
-
+import { ChildToParent } from './child-to-parent/child-to-parent';
+import { CurrencyPipe } from './pipes/currency-pipe';
+import { AppComponents } from './app-components/app-components';
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [Login,Signup,Counter,Inputs,Ifelse,Swichss,Forss,Signalss,Signaltwo,Signalcomputed,Effectsn,Loopcontextual,Twowaybinding,RouterOutlet,FormsModule,Directivess,New,Directivefor,Ngifss,Routess,RouterLink,Header,Profiless,Reactiveformm,Profilesxx,Validatorm,Templatedriven,Appdata,Reusecc],
+  imports: [Login,Signup,Counter,Inputs,Ifelse,Swichss,Forss,Signalss,Signaltwo,Signalcomputed,Effectsn,Loopcontextual,Twowaybinding,RouterOutlet,FormsModule,Directivess,New,Directivefor,Ngifss,Routess,RouterLink,Header,Profiless,Reactiveformm,Profilesxx,Validatorm,Templatedriven,Appdata,Reusecc,ChildToParent,CurrencyPipe,AppComponents,NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -41,7 +47,7 @@ export class App {
   name:string|number="tonmoy"
   other:any="why"
   userName:string="Efte"
-
+  amount=10;
 
   handleClickEvent()
   {
@@ -64,4 +70,23 @@ export class App {
   onUserChange(name:string){
     this.userName=name;
   }
+  users:undefined|string[];
+  handleUsers(users:string[]|undefined){
+    console.log('Received users from child component:', users);
+    this.users=users;
+  }
+ counter=0;
+  updateCounter(){
+    this.counter++;
+  }
+// @ViewChild('appComponents') AppComponents:any;
+
+// constructor(){
+//   afterNextRender(()=>{
+//     console.log(this.AppComponents.counter);
+//   })
+// }
+constructor(private products:Product){
+  
+}
 }
